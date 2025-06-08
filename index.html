@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Elif'e Özür Mesajı</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .mesaj {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            max-width: 600px;
+            font-size: 1.2rem;
+        }
+        .kalp {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mesaj" id="mesaj">
+        <!-- Mesaj buraya yazılacak -->
+    </div>
+
+    <script>
+        const metin = `
+Senden özür dilerim Elif... Seni çok seviyorum.
+Seni kırdıysam, üzgünüm...
+
+Kalbini istemeden de olsa incittiysem, lütfen affet.
+Hatalarımı telafi etmek istiyorum çünkü sen benim için çok kıymetlisin.
+
+Beni affeder misin? 🤍
+        `;
+
+        let i = 0;
+        const mesajDiv = document.getElementById("mesaj");
+
+        function yavasYaz() {
+            if (i < metin.length) {
+                mesajDiv.innerHTML += metin.charAt(i);
+                i++;
+                setTimeout(yavasYaz, 50);
+            }
+        }
+
+        yavasYaz();
+    </script>
+</body>
+</html>
